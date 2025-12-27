@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kanban | Gear Guard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <img src="logo.png" alt="Logo" style="height: 32px;">
+    <div class="brand">GEAR GUARD</div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Dashboard</a>
+    <a href="equipment.html">Equipment</a>
+    <a href="maintenance.html">Maintenance</a>
+    <a href="kanban.html" class="active">Kanban</a>
+  </nav>
+</header>
+
+<section class="page">
+
+<h2>Add Kanban Task</h2>
+<div class="form-card">
+  <input id="kbSubject" placeholder="Subject">
+  <input id="kbEqName" placeholder="Equipment Name">
+  <input id="kbEqId" placeholder="Equipment ID">
+  <input id="kbDate" type="date">
+  <button onclick="addKanban()">Add</button>
+</div>
+
+<h2>Kanban Board</h2>
+
+<div class="kanban">
+  
+  <div class="column" ondrop="drop(event, 'New')" ondragover="allowDrop(event)">
+    <h4 style="color: #38bdf8">New</h4> <div id="kanbanNew" class="task-container"></div>
+  </div>
+
+  <div class="column" ondrop="drop(event, 'In Progress')" ondragover="allowDrop(event)">
+    <h4 style="color: #facc15">In Progress</h4> <div id="kanbanProgress" class="task-container"></div>
+  </div>
+
+  <div class="column" ondrop="drop(event, 'Repaired')" ondragover="allowDrop(event)">
+    <h4 style="color: #4ade80">Repaired</h4> <div id="kanbanRepaired" class="task-container"></div>
+  </div>
+
+  <div class="column" ondrop="drop(event, 'Scrapped')" ondragover="allowDrop(event)">
+    <h4 style="color: #f87171">Scrapped</h4> <div id="kanbanScrapped" class="task-container"></div>
+  </div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

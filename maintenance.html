@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maintenance | Gear Guard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <img src="logo.png" alt="Logo" style="height: 32px;">
+    <div class="brand">GEAR GUARD</div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Dashboard</a>
+    <a href="equipment.html">Equipment</a>
+    <a href="maintenance.html" class="active">Maintenance</a>
+    <a href="kanban.html">Kanban</a>
+  </nav>
+</header>
+
+<section class="page">
+
+<h2>Add Maintenance Request</h2>
+<div class="form-card">
+  <select id="mntEqSelect" onchange="autoFillMaintenance()">
+    <option value="">-- Select Equipment --</option>
+  </select>
+
+  <select id="mntType" style="background:#020617; color:#fff; padding:12px; border-radius:8px; border:1px solid rgba(255,255,255,0.1);">
+    <option value="Corrective">Corrective (Breakdown)</option>
+    <option value="Preventive">Preventive (Routine)</option>
+  </select>
+
+  <input id="mntCategory" placeholder="Category" readonly style="background: #1e293b; color: #94a3b8;">
+  <input id="mntTeam" placeholder="Team" readonly style="background: #1e293b; color: #94a3b8;">
+
+  <input id="mntSubject" placeholder="Subject (e.g. Leaking Oil)">
+  <input id="mntDate" type="date">
+  <textarea id="mntDesc" placeholder="Description"></textarea>
+  
+  <button onclick="addMaintenance()">Save Request</button>
+</div>
+
+<h2>Maintenance List</h2>
+<table id="maintenanceTable">
+  <tr>
+    <th>Subject</th><th>Date</th><th>Description</th>
+  </tr>
+</table>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Equipment | Gear Guard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <img src="logo.png" alt="Logo" style="height: 32px;">
+    <div class="brand">GEAR GUARD</div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Dashboard</a>
+    <a href="equipment.html" class="active">Equipment</a>
+    <a href="maintenance.html">Maintenance</a>
+    <a href="kanban.html">Kanban</a>
+  </nav>
+</header>
+
+<section class="page">
+
+<h2>Add Equipment</h2>
+<div class="form-card">
+  <input id="eqName" placeholder="Equipment Name">
+  <input id="eqId" placeholder="Equipment ID">
+  <input id="eqWarranty" placeholder="Warranty">
+  <input id="eqLocation" placeholder="Location">
+  <button onclick="addEquipment()">Save</button>
+</div>
+
+<h2>Equipment List</h2>
+<table id="equipmentTable">
+  <tr>
+    <th>Name</th><th>ID</th><th>Warranty</th><th>Location</th>
+  </tr>
+</table>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

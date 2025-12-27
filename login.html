@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gear Guard | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="login-topbar">
+  <div class="brand-logo" style="display: flex; align-items: center; gap: 10px;">
+    <img src="logo.png" alt="Logo" style="height: 32px;">
+    <span style="font-weight: 800; font-size: 20px;">GEAR GUARD</span>
+  </div>
+
+  <div class="settings-wrapper">
+    <div class="settings-btn">Settings ▾</div>
+    <div class="settings-dropdown">
+      <a href="#">User Roles</a>
+      <a href="#">System Rules</a>
+      <a href="#">Help Center</a>
+    </div>
+  </div>
+</header>
+
+<main class="login-container">
+  <div class="login-card animate-card">
+    <h1 id="formTitle">Get Started</h1>
+    <p class="subtitle" id="formSubtitle">Create an account to manage maintenance</p>
+
+    <div class="tab">
+      <button id="btn-signup" class="active" onclick="switchTab('signup')">Sign Up</button>
+      <button id="btn-login" onclick="switchTab('login')">Log In</button>
+    </div>
+
+    <div id="signup-form" class="form-content">
+      <div class="input-group">
+        <input id="signupName" placeholder="Full Name / Company">
+      </div>
+      
+      <div class="input-group">
+        <input id="signupEmail" type="email" placeholder="Email Address">
+      </div>
+      <div class="input-group">
+        <input id="signupPassword" type="password" placeholder="Password">
+      </div>
+      <button class="primary-btn" onclick="signup()">Create Account</button>
+    </div>
+
+    <div id="login-form" class="form-content" style="display: none;">
+      <div class="input-group">
+        <input id="loginEmail" type="email" placeholder="Email Address">
+      </div>
+      <div class="input-group">
+        <input id="loginPassword" type="password" placeholder="Password">
+      </div>
+      <button class="primary-btn" onclick="login()">Log In</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2024 Gear Guard. All rights reserved.
+</footer>
+
+<script src="login.js"></script>
+</body>
+</html>
